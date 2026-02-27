@@ -1,0 +1,10 @@
+Script started on 2026-02-27 12:37:36+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="128" LINES="9"]
+bash: hash: hashing disabled
+]0;therunningman@omarchy:~/Public/part12-containers-applications[?2004h
+[1;36mpart12-containers-applications[0m [3;36mmaster[0m [36m? [1m❯[0m [1;36mpart12-containers-applications[0m [3;36mmaster[0m [36m? [1m❯[0m echo "yo guys"
+[?2004lyo guys
+]0;therunningman@omarchy:~/Public/part12-containers-applications[?2004h
+[1;36mpart12-containers-applications[0m [3;36mmaster[0m [36m? [1m❯[0m [1;36mpart12-containers-applications[0m [3;36mmaster[0m [36m? [1m❯[0m exit
+[?2004lexit
+
+Script done on 2026-02-27 12:37:45+01:00 [COMMAND_EXIT_CODE="0"]
