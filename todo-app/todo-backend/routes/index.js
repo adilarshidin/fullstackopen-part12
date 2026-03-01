@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
-
-const configs = require('../util/config')
-const redis = require('../redis')
+const redis = require('../redis');
+const configs = require('../util/config');
 
 let visits = 0
+
+router.get('/statistics', async (req, res) => {
+  res.json({ todosCounter: await redis.getAsync('todosCounter') })
+})
 
 /* GET index data. */
 router.get('/', async (req, res) => {
