@@ -1,6 +1,8 @@
 services:
   todo-backend:
     image: todo-backend
+    environment:
+      - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database?authSource=the_database
     build: .
     ports:
       - 3000:3000
