@@ -15,7 +15,9 @@ WORKDIR /usr/src/app
 
 COPY --from=test-stage /usr/src/app/ /usr/src/app
 
-RUN npm ci
+ARG VITE_BACKEND_URL
+ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
+
 RUN npm run build
 
 FROM nginx

@@ -35,7 +35,7 @@ const TodoList = ({ todos, deleteTodo, completeTodo }) => {
         )
 
         return (
-          <Item key={todo.id} todo={todo} doneInfo={doneInfo} notDoneInfo={notDoneInfo} />
+          <Item key={todo._id} todo={todo} doneInfo={doneInfo} notDoneInfo={notDoneInfo} />
         )
       }).reduce((acc, cur) => [...acc, <hr />, cur], [])}
     </>
