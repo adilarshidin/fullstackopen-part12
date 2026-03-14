@@ -14,7 +14,7 @@ services:
     image: redis
     command: redis-server /usr/local/etc/redis/redis.conf
     volumes:
-      - ./todo-backend/data:/data
+      - ./todo-backend/redis_data:/data
       - ./todo-backend/redis.conf:/usr/local/etc/redis/redis.conf
     container_name: todo-redis-prod
 
@@ -22,7 +22,7 @@ services:
     image: todo-backend
     build:
       context: ./todo-backend/
-      dockerfile: ./todo-backend/dev.Dockerfile
+      dockerfile: ./todo-backend/Dockerfile
     volumes:
       - ./todo-backend/:/usr/src/app
     container_name: todo-backend-prod
@@ -37,7 +37,7 @@ services:
     image: todo-front
     build:
       context: ./todo-frontend/
-      dockerfile: ./todo-frontend/dev.Dockerfile
+      dockerfile: ./todo-frontend/Dockerfile
     container_name: todo-frontend-prod
     depends_on:
       - todo-backend-prod
