@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const indexRouter = require('./routes/index');
 const todosRouter = require('./routes/todos');
+const statisticsRouter = require('./routes/statistics');
 
 const app = express();
 
@@ -15,5 +16,6 @@ app.use(express.json());
 
 app.use('/', indexRouter);
 app.use('/api/todos', todosRouter);
+app.use('/api/statistics', statisticsRouter);
 
 module.exports = app;
