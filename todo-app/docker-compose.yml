@@ -1,6 +1,6 @@
 services:
   todo-mongo-prod:
-    image: ini-mongo
+    image: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
