@@ -19,10 +19,9 @@ services:
     container_name: todo-redis-prod
 
   todo-backend-prod:
-    image: todo-backend
     build:
       context: ./todo-backend/
-      dockerfile: ./todo-backend/Dockerfile
+      dockerfile: Dockerfile
     volumes:
       - ./todo-backend/:/usr/src/app
     container_name: todo-backend-prod
@@ -34,10 +33,9 @@ services:
       - todo-redis-prod
 
   todo-frontend-prod:
-    image: todo-front
     build:
       context: ./todo-frontend/
-      dockerfile: ./todo-frontend/Dockerfile
+      dockerfile: Dockerfile
     container_name: todo-frontend-prod
     depends_on:
       - todo-backend-prod
