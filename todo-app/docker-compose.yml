@@ -19,6 +19,7 @@ services:
     container_name: todo-redis-prod
 
   todo-backend-prod:
+    image: todo-backend
     build:
       context: ./todo-backend/
       dockerfile: Dockerfile
@@ -33,6 +34,7 @@ services:
       - todo-redis-prod
 
   todo-frontend-prod:
+    image: todo-front
     build:
       context: ./todo-frontend/
       dockerfile: Dockerfile

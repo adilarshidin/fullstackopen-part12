@@ -3,3 +3,4 @@ dump.rdb
 .env
 todo-app/todo-backend/data/
 playwright-report/
+test-results/
